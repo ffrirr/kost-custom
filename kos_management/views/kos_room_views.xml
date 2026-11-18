@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_kos_room_tree" model="ir.ui.view">
+        <field name="name">kos.room.list</field>
+        <field name="model">kos.room</field>
+        <field name="arch" type="xml">
+            <list string="Daftar Kamar">
+                <field name="name"/>
+                <field name="floor"/>
+                <field name="room_type"/>
+                <field name="price"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_kos_room_form" model="ir.ui.view">
+        <field name="name">kos.room.form</field>
+        <field name="model">kos.room</field>
+        <field name="arch" type="xml">
+            <form string="Kamar Kos">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="misal: Kamar 101"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="floor"/>
+                            <field name="room_type"/>
+                        </group>
+                        <group>
+                            <field name="price"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_kos_room" model="ir.actions.act_window">
+        <field name="name">Kamar Kos</field>
+        <field name="res_model">kos.room</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

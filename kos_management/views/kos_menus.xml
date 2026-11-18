@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_kos_root" name="Smart Kost" sequence="10"/>
+    <menuitem id="menu_kos_room" name="Kamar Kos" parent="menu_kos_root" action="action_kos_room" sequence="10"/>
+</odoo>

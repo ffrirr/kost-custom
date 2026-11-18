@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kos_room_user,access.kos.room.user,model_kos_room,base.group_user,1,1,1,1
+access_kos_contract_user,access.kos.contract.user,model_kos_contract,base.group_user,1,1,1,1
